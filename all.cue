@@ -28,14 +28,14 @@
 
 _thaiShrimpPasteComment2: #Comment & {
 	text: """
-		   You might see the Thai word for shrimp paste (กะปิ) spelled in one of
-		   many ways: kapi, gabi, gkabi are three of many possibilities.
+		You might see the Thai word for shrimp paste (กะปิ) spelled in one of
+		many ways: kapi, gabi, gkabi are three of many possibilities.
 
-		   Each spelling is an attempt to reconcile the two consonants in the
-		   Thai word for shrimp paste that don't exist in English – the initial
-		   consonant is a cross between a "G" and a "K" while the middle
-		   consonant is a cross between a "B" and a "P".
-  		   """
+		Each spelling is an attempt to reconcile the two consonants in the
+		Thai word for shrimp paste that don't exist in English – the initial
+		consonant is a cross between a "G" and a "K" while the middle
+		consonant is a cross between a "B" and a "P".
+		"""
 	url: "http://www.thaifoodandtravel.com/features/note.html"
 }
 
