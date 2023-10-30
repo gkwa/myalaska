@@ -22,6 +22,7 @@
 	recipes?: [...#Recipe]
 	stores?: [...#Store]
 	urls?: [...string]
+	manufacturer?: string
 	comments?: [...#Comment]
 	googleSearch?: [...string]
 }
@@ -252,15 +253,19 @@ _m2mMart: #Store & {
 	notes: ["Korean Grocer"]
 	urls: ["https://www.google.com/search?q=m2m+mart&oq=m2&gs_lcrp=EgZjaHJvbWUqCQgAECMYJxiKBTIJCAAQIxgnGIoFMhAIARAuGK8BGMcBGIAEGI4FMgoIAhAuGLEDGIAEMgoIAxAAGLEDGIAEMg0IBBAuGLEDGIAEGOUEMg0IBRAAGIMBGLEDGIAEMgoIBhAAGLEDGIAEMgoIBxAAGLEDGIAEMgcICBAAGIAEMgcICRAAGI8C0gEIMjI1N2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lpg=cid:CgIgAQ%3D%3D,ik:CAoSLEFGMVFpcE15YzlKMF9jRTJzMFVUUHJjaFlvSUVLcnlCcnlXOFo5akpsR0dD"]
 }
-products: [_salt, _thaiChilies, _thaiBasil, _thaiShrimpPaste]
 _oliveOrCoconutOil: #Product & {
 	names: ["Olive or coconut oil"]
 	recipes: [_thaiCurry2]
 }
 _hanaAsbrink: {
 	name: "Hana Asbrink"
-	site?: ["https://www.youtube.com/c/HanaAsbrink"]
+	site?: ["https://www.youtube.com/c/HanaAsbrink", "https://www.instagram.com/hanaasbrink/"]
 	motivation?: [_coldSobaWithPerillaOilDressing]
+}
+_kikkomanJapaneseNoodleSoupBaseHonTsuyu: #Product & {
+	names: ["Kikkoman Japanese Noodle Soup Base (Hon Tsuyu)"]
+	manufacturer: "Kikkoman"
+	urls: ["https://www.amazon.com/Kikkoman-Japanese-Noodle-Soup-Tsuyu/dp/B002Z3F0IW", "https://www.google.com/search?q=kikkoman+japanese+noodle+soup+base(hon+tsuyu)&oq=Kikkoman+Japanese+Noodle+Soup+Base(Hon+Tsuyu)&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBwgBEAAYgAQyCggCEAAYhgMYigUyCggDEAAYhgMYigUyBggEEEUYPDIGCAUQRRg9MgYIBhBFGD3SAQc0NzBqMGo0qAIAsAIA&sourceid=chrome&ie=UTF-8", "https://www.youtube.com/watch?v=61nPpDkz1AI"]
 }
 _coldSobaWithPerillaOilDressing: #Recipe & {
 	type:  "recipe"
@@ -273,3 +278,4 @@ _perillaOil: #Product & {
 	urls: ["https://www.youtube.com/watch?v=VpAS3RarPi8", "https://megakfood.com/products/8801045448503"]
 	recipes: [_coldSobaWithPerillaOilDressing]
 }
+products: [_salt, _thaiChilies, _thaiBasil, _thaiShrimpPaste]
