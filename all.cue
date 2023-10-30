@@ -2,7 +2,14 @@
 	type:      "store"
 	title:     string
 	location?: string
+	notes?: [...string]
 	urls?: [...string]
+}
+#Chef: {
+	type: "chef"
+	name: string
+	site?: [...string]
+	motivation?: [...string]
 }
 #Recipe: {
 	type:  "recipe"
@@ -160,7 +167,7 @@ _snowPeas: #Product & {
 }
 _buckwheatSoba: #Product & {
 	names: ["Buckwheat Soba"]
-	urls: ["https://www.amazon.com/gp/product/B00101YEBO/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00101YEBO&linkCode=as2&tag=veggiekinsblo-20&linkId=d7d54eb57124248310bb1b8a3d05a83e", "https://veggiekinsblog.com/2020/01/13/vegan-zaru-soba/"]
+	urls: ["https://www.amazon.com/gp/product/B00101YEBO", "https://veggiekinsblog.com/2020/01/13/vegan-zaru-soba/"]
 }
 _thaiBasil: #Product & {
 	names: ["Thai basil"]
@@ -168,7 +175,7 @@ _thaiBasil: #Product & {
 }
 _thaiBasilLeaves: #Product & {
 	names: ["Thai basil leaves"]
-	urls: ["https://www.fredmeyer.com/p/simple-truth-organic-thai-basil/0001111001922?searchType=mktg+attribute"]
+	urls: ["https://www.fredmeyer.com/p/simple-truth-organic-thai-basil/0001111001922"]
 }
 _thaiChilies: #Product & {
 	names: ["Thai chilies"]
@@ -184,7 +191,6 @@ _whitePeppercorn: #Product & {
 	names: ["White peppercorn"]
 	recipes: [_thaiCurry1]
 }
-products: [_thaiChilies, _thaiBasil, _thaiShrimpPaste]
 _recipe1: {
 	ingredients: [...#Product]
 }
@@ -216,10 +222,6 @@ _chiliPeppers: #Product & {
 	names: ["Chili peppers"]
 	recipes: [_thaiCurry2]
 }
-_oliveOrCoconutOil: #Product & {
-	names: ["Olive or coconut oil"]
-	recipes: [_thaiCurry2]
-}
 _canCoconutMilk: #Product & {
 	names: ["Can coconut milk"]
 	recipes: [_thaiCurry2]
@@ -239,4 +241,35 @@ _turmeric: #Product & {
 _salt: #Product & {
 	names: ["Salt"]
 	recipes: [_thaiCurry2]
+}
+_bonitoFlakes: #Product & {
+	names: ["Bonito Flakes"]
+	urls: ["https://chefjacooks.com/en/wprm_print/7506", "https://www.amazon.com/Kaneso-Tokuyou-Hanakatsuo-Bonito-Flakes/dp/B0052BGLMS", "https://www.google.com/search?sca_esv=577907868&sxsrf=AM9HkKmChgo0Ktu9IlnGTSWuzmK5YqQsiQ:1698696041201&q=Bonito+Flakes&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjy0Pfwx56CAxUBODQIHey0BwcQ0pQJegQIDhAB&biw=1440&bih=758&dpr=2"]
+}
+_m2mMart: #Store & {
+	type:  "store"
+	title: "M2M Mart"
+	notes: ["Korean Grocer"]
+	urls: ["https://www.google.com/search?q=m2m+mart&oq=m2&gs_lcrp=EgZjaHJvbWUqCQgAECMYJxiKBTIJCAAQIxgnGIoFMhAIARAuGK8BGMcBGIAEGI4FMgoIAhAuGLEDGIAEMgoIAxAAGLEDGIAEMg0IBBAuGLEDGIAEGOUEMg0IBRAAGIMBGLEDGIAEMgoIBhAAGLEDGIAEMgoIBxAAGLEDGIAEMgcICBAAGIAEMgcICRAAGI8C0gEIMjI1N2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lpg=cid:CgIgAQ%3D%3D,ik:CAoSLEFGMVFpcE15YzlKMF9jRTJzMFVUUHJjaFlvSUVLcnlCcnlXOFo5akpsR0dD"]
+}
+products: [_salt, _thaiChilies, _thaiBasil, _thaiShrimpPaste]
+_oliveOrCoconutOil: #Product & {
+	names: ["Olive or coconut oil"]
+	recipes: [_thaiCurry2]
+}
+_hanaAsbrink: {
+	name: "Hana Asbrink"
+	site?: ["https://www.youtube.com/c/HanaAsbrink"]
+	motivation?: [_coldSobaWithPerillaOilDressing]
+}
+_coldSobaWithPerillaOilDressing: #Recipe & {
+	type:  "recipe"
+	title: "Cold Soba With Perilla Oil Dressing"
+	url?: ["https://food52.com/recipes/print/86501", "https://f52.co/2ZeEZKb", "https://www.youtube.com/watch?v=VpAS3RarPi8"]
+}
+_perillaOil: #Product & {
+	names: ["Perilla Oil"]
+	stores: [_m2mMart]
+	urls: ["https://www.youtube.com/watch?v=VpAS3RarPi8", "https://megakfood.com/products/8801045448503"]
+	recipes: [_coldSobaWithPerillaOilDressing]
 }
